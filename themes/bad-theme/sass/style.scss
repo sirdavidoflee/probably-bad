@@ -1,0 +1,122 @@
+/*!
+Theme Name: Bad Theme
+Theme URI: http://underscores.me/
+Author: Dave L
+Author URI: http://sirdavidoflee.com
+Description: Description
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bad-theme
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Bad Theme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "reset.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "general.scss";
+@import "home.scss";
+@import "sizes.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries
+=============================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (max-width : 480px)
+and (orientation : landscape) {
+	section#main{
+		/*width: 480px;*/
+	}
+}
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px)
+and (orientation : portrait) {
+	section#main{
+		/*width: 320px;*/
+	}
+}
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	section#main{
+		/*width: 1024px;*/
+	}
+}
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	section#main{
+		/*width: 768px;*/
+	}
+}
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+	section#main{
+		/*width: 960px;*/
+	}
+}
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1600px) {
+	section#main{
+		/*width: 1600px;*/
+	}
+}
+/* Retina ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio : 1.5) {
+	img{
+		background-image: url(../img/pic@2x.jpg);
+		-webkit-background-size: 100px 100px;
+		background-size: 100px 100px;
+	}
+}
+
+/* Clearfix - if you use proper coding techniques 
+   you shouldn't have to use this anymore
+=============================================*/
+.cf:before,
+.cf:after {
+	content: "";
+	display: table;
+}
+.cf:after{
+	clear: both;
+}
+.cf{
+	*zoom: 1;
+}

@@ -1,0 +1,349 @@
+/* Fonts
+=============================================*/
+@font-face {
+  font-family: 'StagBlack';
+  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.eot");
+  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.svg#StagSansWebUSCC-Black") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StagBook';
+  src: url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.eot");
+  src: url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.svg#StagWebUSCC-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StagLight';
+  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.eot");
+  src: 	url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.svg#StagLight") format("svg"), 
+  		url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.eot?#iefix") format("embedded-opentype"), 
+		url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.woff") format("woff"), 
+		url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'StagLight';
+		src: url('/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.svg') format('svg');
+	}
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+
+//@font-face {
+//font-family: 'StagLight';
+//src: url('/fonts/font.eot');
+//src: url('/fonts/font.eot?#iefix') format('embedded-opentype'),
+//url('/fonts/font.svg#font') format('svg'),
+//url('/fonts/font.otf') format('opentype'),
+//url('/fonts/font.ttf') format('truetype'),
+//url('/fonts/font.woff') format('woff');
+//font-weight: normal;
+//font-style: normal;
+//}
+
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "icons";
+  src:url("/wp-content/themes/mullen/fonts/icons.eot");
+  src:url("/wp-content/themes/mullen/fonts/icons.eot?#iefix") format("embedded-opentype"),
+	url("/wp-content/themes/mullen/fonts/icons.woff") format("woff"),
+	url("/wp-content/themes/mullen/fonts/icons.ttf") format("truetype"),
+	url("/wp-content/themes/mullen/fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Reset & Normalization
+=============================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog{
+	display: block;
+}
+audio, canvas, video{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+audio:not([controls]){
+	display: none;
+}
+[hidden]{
+	display: none;
+	visibility: hidden;
+}
+
+/* Headings
+=============================================*/
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+h1 {
+	font-size: 4.25em; /* 68px */
+	line-height: 1.1471em;
+}
+h2 {
+	color: #0065a4;
+	font-size: 2.625em; /* 42px */
+	line-height: 1.2381em;
+}
+h3 {
+	font-size: 1.625em; /* 26px */
+	line-height: 1em;
+}
+small {
+	font-size: 0.625em; /* 10px */
+}
+/* Preformatted
+=============================================*/
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre, code, kbd, samp {
+	font: 1em/1.625em;
+}
+/* Tables
+=============================================*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	text-align: left;
+}
+/* Forms
+=============================================*/
+fieldset {
+	border: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+legend {
+	border: 0;
+	*margin-left: -7px;
+}
+button, input, select, textarea {
+	font: 1em/1.625;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+button, input {
+	line-height: normal;
+	*overflow: visible;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	@include box-sizing(content-box);
+}
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+table button, table input {
+	*overflow: auto;
+}
+/* Quotes
+=============================================*/
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+blockquote, q, cite {
+	font-style: italic;
+}
+blockquote > p {
+	padding: 0;
+}
+/* Lists
+=============================================*/
+ul, ol, li {
+	list-style-position: inside;
+	list-style-type: none;
+	list-style-image: none;
+}
+/* Links
+=============================================*/
+a, a:visited, a:hover, a:active {
+	//color: #0067a2;
+	outline: none;
+	text-decoration: none;
+}
+/* Embedded content
+=============================================*/
+object, video {
+	max-width: 100%;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+/* Helpers
+=============================================*/
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+}
+strong, b, dt, .bold {
+	font-weight: bold;
+}
+dfn, .italic {
+	font-style: italic;
+}
+var, address {
+	font-style: normal;
+}
+sub, sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+/* Main
+=============================================*/
+html {
+	height: 100%;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 68px auto 0;
+	min-height: 100%;
+	min-width: 100%;
+	font: bold 14px/20px $stagLight;
+	max-width: 960px;
+	background: #fff;
+}
+
+
+[data-icon]:before {
+  font-family: "icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-graph:before {
+  content: "a";
+}
+.icon-yt-you:before {
+  content: "b";
+}
+.icon-yt-tube:before {
+  content: "c";
+}
+.icon-phone:before {
+  content: "d";
+}
+.icon-open:before {
+  content: "e";
+}
+.icon-mic:before {
+  content: "f";
+}
+.icon-desktop:before {
+  content: "g";
+}
+.icon-twitter:before {
+  content: "h";
+}
+.icon-facebook:before {
+  content: "i";
+}
+.icon-google:before {
+  content: "j";
+}
+.icon-usc-red:before {
+  content: "k";
+}
+.icon-usc-blue:before {
+  content: "l";
+}
+.icon-email-envelope:before {
+  content: "m";
+}
+.icon-linkedin:before {
+  content: "n";
+}
+.icon-menu:before {
+  content: "o";
+}
+
+* {
+	@include box-sizing(border-box);
+}
