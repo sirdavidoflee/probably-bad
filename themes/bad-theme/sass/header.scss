@@ -1,25 +1,37 @@
 header {
-	background: #f4f6f7;
-	height: 70px; // remove this later
+	background: #c6dcd0;
 	left: 0;
+	padding: 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 10;
 	
-	// remove below for phase 2
-	//@include box-shadow(0 2px 2px rgba(1,1,1,.3));
-	
-	@include transition(all 0.4s ease);
-	
 	.inner {
 		height: 100%;
 		margin: 0 auto;
-		max-width: 1081px;
+		max-width: 1080px;
 		position: relative;
 		width: 100%;
 	}
-	
+	h1 {
+		font: normal 60px/66px $badFont;
+		
+		a {
+			color: #414042;
+			text-decoration: none;
+			
+			&:hover {
+				color: #414042;
+				text-decoration: none;
+			};
+		}
+	}
+	input {
+		right: 4%;
+		position: absolute;
+		top: 20px;
+	}
 	a.mobile-menu {
 		color: #87888a;
 		display: none;
@@ -28,61 +40,6 @@ header {
 		right: -3px;
 		top: 18px;
 		width: 37px;
-	}
-	
-	.site-by {
-		color: #949597;
-		float: left;
-		font: normal 11px/12px $sansSerif;
-		letter-spacing: -.5px;
-		margin: 20px 0 0;
-		padding: 0 0 0 110px;
-		
-		@include transition(all 0.4s ease);
-		
-		.home-by {
-			display: none;
-		}
-		.others-by {
-			display: block;
-			margin-top: -1px;
-		}
-	}
-	a.logo {
-		display: inline-block;
-		left: 16px;
-		margin: -22px 0 0;
-		position: absolute;
-		top: 0;
-		
-		span {
-			font-size: 86px;
-			line-height: 10px;
-			
-			@include transition(all 0.4s ease);
-		}
-		.icon-usc-blue {
-			color: #1667a4;
-			display: inline-block;
-		}
-		.icon-usc-red {
-			color: #ec3246;
-			display: block;
-			left: 0;
-			position: absolute;
-			top: 0;
-		}
-	}
-	a.site-logo {
-		bottom: 6px;
-		color: #949597;
-		display: block;
-		font: normal 27px/30px $stagLight;
-		left: 0;
-		letter-spacing: -.5px;
-		position: absolute;
-		
-		@include transition(all 0.4s ease);
 	}
 	nav {
 		// remove this part for phase 2!!!
@@ -192,6 +149,10 @@ header {
 		}
 	}
 }
+.admin-bar header {
+	top: 32px;
+}
+
 .mobile-no-nav {
 	background: rgba(255,255,255, 0.01);
 	height: 100%;
@@ -205,7 +166,7 @@ nav.mobile-nav {
 	//display: none;
 	background: #fff;
 	height: 90%;
-	font: normal 24px/26px $stagLight;
+	font: normal 24px/26px $general;
 	overflow-y: auto;
 	padding: 5%;
 	position: fixed;

@@ -4,27 +4,7 @@
 //@media only screen
 //and (max-width : 480px){
 @media screen and (max-width: 87em){
-//	body {
-//		background: yellow;
-//	}
-	.page-hero {
-		
-		.featured-img {
-			
-			img {
-				height: 100%;
-				position: absolute;
-				width: auto;
-			}
-		}
-	}
-	body.category .page-hero {
-		overflow: hidden;
-		
-		.featured-img {
-			height: 120%;
-		}
-	}
+
 }
 @media screen and (max-width: 70em){
 //	body {
@@ -58,8 +38,9 @@
 	}
 	
 	
-	header, footer, body.search .main, body.page .main, body.error404 .main {
-		padding: 0 20px;
+	header, footer, .bad-content {
+		padding: 0 4%;
+		width: 92%;
 	}
 	
 	body.category {
@@ -463,26 +444,6 @@
 		.inner {
 			padding: 83px 0 30px;
 		}
-		
-		.social-outlets {
-			bottom: 80px;
-			right: 0;
-			
-			h6 {
-				display: none;
-			}
-			li {
-				margin: 0;
-			}
-		}
-		a.business-link {
-			bottom: 92px;
-			left: 0;
-			
-			span {
-				font-size: 100px;
-			}
-		}
 	}
 	
 	.social-share {
@@ -493,21 +454,6 @@
 			}
 			&.youtube a {
 				width: 48px;
-			}
-		}
-	}
-	footer .social-outlets {
-		li {
-			
-			a {
-				width: 33px;
-				
-				span.icon-yt-tube {
-					width: 58px;
-				}
-			}
-			&.youtube a {
-				width: 54px;
 			}
 		}
 	}

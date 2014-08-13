@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			 
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
@@ -75,7 +75,7 @@ get_header(); ?>
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
 					endif;
 				?>
-			</header><!-- .page-header -->
+			
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -101,5 +101,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

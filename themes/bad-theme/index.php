@@ -16,20 +16,35 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<ul class="article-list">
+<?php 
+			if ( have_posts() ) :
+				
+			while ( have_posts() ) : the_post();
+				$title = $post->post_title;
+				$excerpt = wp_trim_words(get_the_excerpt(), '30');
+				$category = get_the_category($post->ID)[0];
+?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				<li>
+<?php
+				if(has_post_thumbnail()):
+?>
+					<a href="<? echo get_permalink() ?>">
+						<?php the_post_thumbnail('thumbnail'); ?>
+					</a>
+<?php
+				endif;
+?>
+					<h4><a href="<? echo get_permalink() ?>"><? echo $title ?></a></h4>
+					<p><? echo $excerpt ?></p>
+					<div class="meta">
+						<?php bad_theme_posted_on(); ?>
+					</div><!-- .entry-meta -->
+				</li>
 
 			<?php endwhile; ?>
+		</ul>
 
 			<?php bad_theme_paging_nav(); ?>
 
@@ -42,5 +57,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

@@ -6,6 +6,12 @@
  *
  * @package Bad Theme
  */
+	if(has_post_thumbnail($post->ID)) {
+		$siteImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+	} else {
+		$siteImg = '/wp-content/themes/bad-theme/img/share-logo.jpg';
+	}
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -19,19 +25,17 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'bad-theme' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+	
+	<header>
+		<div class="inner">
+			<h1><a href="/">Probably Bad</a></h1>
 		</div>
+		<form action="/" method="get">
+			<input type="search" name="s" placeholder="Search" />
+		</form>
+	</header>
+	
+<div id="page" class="hfeed site">
+	
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'bad-theme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	<section class="bad-content">

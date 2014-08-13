@@ -8,14 +8,12 @@
  */
 ?>
 
-	</div><!-- #content -->
+	</section><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bad-theme' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'bad-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'bad-theme' ), 'Bad Theme', '<a href="http://sirdavidoflee.com" rel="designer">Dave L</a>' ); ?>
-		</div><!-- .site-info -->
+	<footer>
+		<div class="inner">
+			<h6>&copy; <?php echo date("Y") ?> ProbablyBad.com</h6>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

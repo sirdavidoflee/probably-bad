@@ -1,69 +1,58 @@
 /* Fonts
 =============================================*/
-@font-face {
-  font-family: 'StagBlack';
-  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.eot");
-  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.svg#StagSansWebUSCC-Black") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'StagBook';
-  src: url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.eot");
-  src: url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.svg#StagWebUSCC-Book") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'StagLight';
-  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.eot");
-  src: 	url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.svg#StagLight") format("svg"), 
-  		url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.eot?#iefix") format("embedded-opentype"), 
-		url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.woff") format("woff"), 
-		url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	@font-face {
-		font-family: 'StagLight';
-		src: url('/wp-content/themes/mullen/fonts/StagSansWebUSCC-Light.svg') format('svg');
-	}
-}
 
 body {
 	-webkit-font-smoothing: antialiased;
 }
 
+@font-face {
+    font-family: 'SpeakEasy';
+    src: url('fonts/SF_Speakeasy-webfont.eot');
+    src: url('fonts/SF_Speakeasy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SF_Speakeasy-webfont.woff') format('woff'),
+         url('fonts/SF_Speakeasy-webfont.ttf') format('truetype'),
+         url('fonts/SF_Speakeasy-webfont.svg#sf_speakeasyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-//@font-face {
-//font-family: 'StagLight';
-//src: url('/fonts/font.eot');
-//src: url('/fonts/font.eot?#iefix') format('embedded-opentype'),
-//url('/fonts/font.svg#font') format('svg'),
-//url('/fonts/font.otf') format('opentype'),
-//url('/fonts/font.ttf') format('truetype'),
-//url('/fonts/font.woff') format('woff');
-//font-weight: normal;
-//font-style: normal;
-//}
+@font-face {
+    font-family: 'Sinkin Light';
+    src: url('fonts/SinkinSans-200XLight-webfont.eot');
+    src: url('fonts/SinkinSans-200XLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SinkinSans-200XLight-webfont.woff') format('woff'),
+         url('fonts/SinkinSans-200XLight-webfont.ttf') format('truetype'),
+         url('fonts/SinkinSans-200XLight-webfont.svg#sinkin_sans200_x_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sinkin Bold';
+    src: url('fonts/SinkinSans-500Medium-webfont.eot');
+    src: url('fonts/SinkinSans-500Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SinkinSans-500Medium-webfont.woff') format('woff'),
+         url('fonts/SinkinSans-500Medium-webfont.ttf') format('truetype'),
+         url('fonts/SinkinSans-500Medium-webfont.svg#sinkin_sans500_medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  src:url("/wp-content/themes/mullen/fonts/icons.eot");
-  src:url("/wp-content/themes/mullen/fonts/icons.eot?#iefix") format("embedded-opentype"),
-	url("/wp-content/themes/mullen/fonts/icons.woff") format("woff"),
-	url("/wp-content/themes/mullen/fonts/icons.ttf") format("truetype"),
-	url("/wp-content/themes/mullen/fonts/icons.svg#icons") format("svg");
+  font-family: "probably-bad-icons";
+  src:url("fonts/probably-bad-icons.eot");
+  src:url("fonts/probably-bad-icons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/probably-bad-icons.woff") format("woff"),
+    url("fonts/probably-bad-icons.ttf") format("truetype"),
+    url("fonts/probably-bad-icons.svg#probably-bad-icons") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 
 /* Reset & Normalization
@@ -112,7 +101,6 @@ h1 {
 	line-height: 1.1471em;
 }
 h2 {
-	color: #0065a4;
 	font-size: 2.625em; /* 42px */
 	line-height: 1.2381em;
 }
@@ -210,9 +198,8 @@ ul, ol, li {
 /* Links
 =============================================*/
 a, a:visited, a:hover, a:active {
-	//color: #0067a2;
 	outline: none;
-	text-decoration: none;
+	text-decoration: underline;
 }
 /* Embedded content
 =============================================*/
@@ -263,17 +250,18 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 body {
+	color: #414042;
 	margin: 68px auto 0;
 	min-height: 100%;
 	min-width: 100%;
-	font: bold 14px/20px $stagLight;
+	font: normal 16px/28px $general;
 	max-width: 960px;
 	background: #fff;
 }
 
 
 [data-icon]:before {
-  font-family: "icons" !important;
+  font-family: "probably-bad-icons" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -285,9 +273,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "icons" !important;
+[class^="bad-"]:before,
+[class*=" bad-"]:before {
+  font-family: "probably-bad-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -298,52 +286,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-graph:before {
+.bad-icon-menu:before {
   content: "a";
 }
-.icon-yt-you:before {
+.bad-icon-facebook:before {
   content: "b";
 }
-.icon-yt-tube:before {
+.bad-icon-twitter:before {
   content: "c";
-}
-.icon-phone:before {
-  content: "d";
-}
-.icon-open:before {
-  content: "e";
-}
-.icon-mic:before {
-  content: "f";
-}
-.icon-desktop:before {
-  content: "g";
-}
-.icon-twitter:before {
-  content: "h";
-}
-.icon-facebook:before {
-  content: "i";
-}
-.icon-google:before {
-  content: "j";
-}
-.icon-usc-red:before {
-  content: "k";
-}
-.icon-usc-blue:before {
-  content: "l";
-}
-.icon-email-envelope:before {
-  content: "m";
-}
-.icon-linkedin:before {
-  content: "n";
-}
-.icon-menu:before {
-  content: "o";
-}
-
-* {
-	@include box-sizing(border-box);
 }

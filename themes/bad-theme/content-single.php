@@ -1,62 +1,47 @@
 <?php
 /**
- * @package Bad Theme
+ * @package _s
  */
+
+$pageUrl = urlencode(get_the_permalink());
+
+?>
+<?php edit_post_link( __( 'Edit', '_s' ), '<span class="edit-link">', '</span>' ); ?>
+<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<div class="entry-meta">
+	<?php bad_theme_posted_on(); ?>
+</div><!-- .entry-meta -->
+
+<?php
+	if(has_post_thumbnail()):
+?>
+<div class="entry-media">
+	<img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>" alt="<?php echo get_the_title() ?>" itemprop="image" />
+</div>
+<?php
+	endif;
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<ul class="social-share">
+	<li class="title">Share</li>
+	<li class="twitter">
+		<a href="https://twitter.com/home?status=<?php echo $pageUrl ?>%3Futm_source%3Dpageshare%26utm_medium%3Dsocialshare%26utm_content%3Dtweet%26utm_campaign%3Dabb" class="bad-icon-twitter" target="_blank">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="facebook">
+		<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $pageUrl ?>%3Futm_source%3Dpageshare%26utm_medium%3Dsocialshare%26utm_content%3Dfbpost%26utm_campaign%3Dabb" class="bad-icon-facebook" target="_blank">
+			<span>Facebook</span>
+		</a>
+	</li>
+</ul>
 
-		<div class="entry-meta">
-			<?php bad_theme_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bad-theme' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'bad-theme' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'bad-theme' ) );
-
-			if ( ! bad_theme_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'bad-theme' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'bad-theme' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'bad-theme' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'bad-theme' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'bad-theme' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+<div class="entry-content">
+	<?php the_content(); ?>
+	<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
+			'after'  => '</div>',
+		) );
+	?>
+</div><!-- .entry-content -->
