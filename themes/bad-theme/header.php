@@ -8,6 +8,8 @@
  */
 	if(has_post_thumbnail($post->ID)) {
 		$siteImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+	} elseif(is_front_page()) {
+		$siteImg = '/wp-content/themes/bad-theme/img/share-logo.jpg';
 	} else {
 		$siteImg = '/wp-content/themes/bad-theme/img/share-logo.jpg';
 	}
