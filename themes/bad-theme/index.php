@@ -23,7 +23,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 				$title = $post->post_title;
 				$excerpt = wp_trim_words(get_the_excerpt(), '30');
-				$category = get_the_category($post->ID)[0];
+				//$category = get_the_category($post->ID)[0];
 ?>
 
 				<li>

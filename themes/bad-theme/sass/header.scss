@@ -24,13 +24,17 @@ header {
 			&:hover {
 				color: #414042;
 				text-decoration: none;
-			};
+			}
 		}
 	}
 	input {
+		border: none;
+		font-family: $general;
 		right: 4%;
+		padding: 10px 10px;
 		position: absolute;
-		top: 20px;
+		top: 12px;
+		width: 200px;
 	}
 	a.mobile-menu {
 		color: #87888a;
