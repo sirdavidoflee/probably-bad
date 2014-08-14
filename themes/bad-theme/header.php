@@ -21,6 +21,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<meta name="description" content="One way or another, every movie, tv show, or video game is probably bad. We will tell you why." />
+<meta property="og:image" content="<?php echo $siteImg ?>" />
+
 <?php wp_head(); ?>
 </head>
 
