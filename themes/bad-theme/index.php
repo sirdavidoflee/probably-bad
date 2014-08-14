@@ -56,7 +56,6 @@ get_header(); ?>
 					<li class="prev"><?php previous_posts_link('&laquo; Prev', $wp_query->max_num_pages) ?></li>
 					<li class="next"><?php next_posts_link('Next &raquo;', $wp_query->max_num_pages) ?></li>
 				</ul>
-				<h4><?php echo $start . '-' . $end . ' of ' . $total ?></h4>
 			</div>
 
 		<?php else : ?>
