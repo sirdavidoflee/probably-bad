@@ -60,10 +60,16 @@
 	
 	.entry-media {
 		padding: 15px 0 10px;
+        
+        img {
+            display: block;
+            margin: 0 auto;
+        }
 	}
     .entry-content {
         
         iframe {
+            margin: 0 auto;
             max-width: 100%;
         }
     }
@@ -137,7 +143,8 @@
 
 
 .social-share {
-	float: right;
+    clear: both;
+    text-align: right;
     padding: 10px 0;
 	
 	li {
