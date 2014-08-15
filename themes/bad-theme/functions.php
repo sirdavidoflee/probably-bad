@@ -128,3 +128,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_image_size( 'wide', 600, 200, true );

@@ -6,6 +6,11 @@
 	
 	h1 {
 		font: normal 30px/34px $header;
+        padding: 15px 0 0;
+        
+		span {
+			font-style: italic;
+		}
 	}
 	h2 {
 		color: #3e553d;
@@ -56,6 +61,12 @@
 	.entry-media {
 		padding: 15px 0 10px;
 	}
+    .entry-content {
+        
+        iframe {
+            max-width: 100%;
+        }
+    }
 	
 	.article-list {
 		
@@ -78,6 +89,11 @@
 			margin: 0 15px 0 0;
 			padding: 1%;
 		}
+        span  {
+            &.wide {
+                display: none;
+            }
+        }
 		p {
 			padding: 5px 0 8px;
 		}
@@ -105,11 +121,24 @@
 		}
 	}
 }
+.tags-links {
+    border-top: 3px solid #939c92;
+    display: block;
+    font-size: 12px;
+    margin: 60px 0 0;
+    padding: 15px 0 0;
+    
+    .author {
+        display: block;
+        font-style: italic;
+    }
+}
 
 
 
 .social-share {
 	float: right;
+    padding: 10px 0;
 	
 	li {
 		display: inline-block;

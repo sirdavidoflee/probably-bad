@@ -243,6 +243,27 @@
 			}
 		}
 	}
+    .bad-content {
+        
+        .article-list {
+            
+    		span {
+            
+                &.wide {
+                    display: block;
+                    
+                    img {
+                        height: auto;
+                        margin: 0 0 10px;
+                        width: 100%;
+                    }
+                }
+                &.small {
+                    display: none;
+                }
+    		}
+        }
+    }
 	.main {
 		
 		.main-content {
@@ -456,7 +477,7 @@
 		li {
 			
 			a {
-				width: 23px;
+                
 			}
 			&.youtube a {
 				width: 48px;

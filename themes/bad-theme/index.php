@@ -36,7 +36,8 @@ get_header(); ?>
 				if(has_post_thumbnail()):
 ?>
 					<a href="<? echo get_permalink() ?>">
-						<?php the_post_thumbnail('thumbnail'); ?>
+						<span class="small"><?php the_post_thumbnail('thumbnail'); ?></span>
+                        <span class="wide"><?php the_post_thumbnail('wide'); ?></span>
 					</a>
 <?php
 				endif;

@@ -17,36 +17,37 @@ get_header(); ?>
 			
 			<ul class="article-list">
 <?php
-						while ( have_posts() ) : the_post();
-							$title = $post->post_title;
-							$excerpt = wp_trim_words(get_the_excerpt(), '30');
-				
-							$start = ($wp_query->query_vars['paged'] == 0) ? 1 : (($wp_query->query_vars['paged'] - 1) * $wp_query->query_vars['posts_per_page']) + 1;
-							$end = $start + ($wp_query->query_vars['posts_per_page'] - 1);
-							$end = ($end > $wp_query->found_posts)? $wp_query->found_posts : $end;
-							$total = $wp_query->found_posts;
-							//$category = get_the_category($post->ID)[0];
-			?>
+				while ( have_posts() ) : the_post();
+					$title = $post->post_title;
+					$excerpt = wp_trim_words(get_the_excerpt(), '30');
+		
+					$start = ($wp_query->query_vars['paged'] == 0) ? 1 : (($wp_query->query_vars['paged'] - 1) * $wp_query->query_vars['posts_per_page']) + 1;
+					$end = $start + ($wp_query->query_vars['posts_per_page'] - 1);
+					$end = ($end > $wp_query->found_posts)? $wp_query->found_posts : $end;
+					$total = $wp_query->found_posts;
+					//$category = get_the_category($post->ID)[0];
+	?>
 
-							<li>
-			<?php
-							if(has_post_thumbnail()):
-			?>
-								<a href="<? echo get_permalink() ?>">
-									<?php the_post_thumbnail('thumbnail'); ?>
-								</a>
-			<?php
-							endif;
-			?>
-								<h4><a href="<? echo get_permalink() ?>"><? echo $title ?></a></h4>
-								<p><? echo $excerpt ?></p>
-								<div class="meta">
-									<?php bad_theme_posted_on(); ?>
-								</div><!-- .entry-meta -->
-							</li>
+					<li>
+	<?php
+					if(has_post_thumbnail()):
+	?>
+    					<a href="<? echo get_permalink() ?>">
+    						<span class="small"><?php the_post_thumbnail('thumbnail'); ?></span>
+                            <span class="wide"><?php the_post_thumbnail('wide'); ?></span>
+    					</a>
+	<?php
+					endif;
+	?>
+						<h4><a href="<? echo get_permalink() ?>"><? echo $title ?></a></h4>
+						<p><? echo $excerpt ?></p>
+						<div class="meta">
+							<?php bad_theme_posted_on(); ?>
+						</div><!-- .entry-meta -->
+					</li>
 
-						<?php endwhile; ?>
-					</ul>
+				<?php endwhile; ?>
+			</ul>
 
 						<div class="pagination">
 							<ul class="prev-next">

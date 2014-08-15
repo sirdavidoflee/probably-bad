@@ -18,13 +18,17 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
+                            echo 'Catagory: <span>';
 							single_cat_title();
+                            echo '</span>';
 
 						elseif ( is_tag() ) :
-							single_tag_title();
+							echo 'Tag: <span>';
+                            single_tag_title();
+                            echo '</span>';
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'bad-theme' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'bad-theme' ), '<span class="vcard">' . get_the_author_meta('nickname') . '</span>' );
 
 						elseif ( is_day() ) :
 							printf( __( 'Day: %s', 'bad-theme' ), '<span>' . get_the_date() . '</span>' );
@@ -78,17 +82,39 @@ get_header(); ?>
 			
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+            			<ul class="article-list">
+            <?php
+            				while ( have_posts() ) : the_post();
+            					$title = $post->post_title;
+            					$excerpt = wp_trim_words(get_the_excerpt(), '30');
+		
+            					$start = ($wp_query->query_vars['paged'] == 0) ? 1 : (($wp_query->query_vars['paged'] - 1) * $wp_query->query_vars['posts_per_page']) + 1;
+            					$end = $start + ($wp_query->query_vars['posts_per_page'] - 1);
+            					$end = ($end > $wp_query->found_posts)? $wp_query->found_posts : $end;
+            					$total = $wp_query->found_posts;
+            					//$category = get_the_category($post->ID)[0];
+            	?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+            					<li>
+            	<?php
+            					if(has_post_thumbnail()):
+            	?>
+                					<a href="<? echo get_permalink() ?>">
+                						<span class="small"><?php the_post_thumbnail('thumbnail'); ?></span>
+                                        <span class="wide"><?php the_post_thumbnail('wide'); ?></span>
+                					</a>
+            	<?php
+            					endif;
+            	?>
+            						<h4><a href="<? echo get_permalink() ?>"><? echo $title ?></a></h4>
+            						<p><? echo $excerpt ?></p>
+            						<div class="meta">
+            							<?php bad_theme_posted_on(); ?>
+            						</div><!-- .entry-meta -->
+            					</li>
 
-			<?php endwhile; ?>
+            				<?php endwhile; ?>
+            			</ul>
 
 			<?php bad_theme_paging_nav(); ?>
 
