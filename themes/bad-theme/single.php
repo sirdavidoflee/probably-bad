@@ -5,6 +5,11 @@
  * @package Bad Theme
  */
 
+$metaDesc = '';
+while ( have_posts() ) : the_post();
+$metaDesc = get_the_excerpt();
+endwhile;
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

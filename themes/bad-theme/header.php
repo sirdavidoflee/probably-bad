@@ -6,6 +6,8 @@
  *
  * @package Bad Theme
  */
+	global $metaDesc;
+
 	if(has_post_thumbnail($post->ID) && !is_front_page()) {
 		$siteImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 	} elseif(is_front_page()) {
@@ -24,7 +26,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<meta name="description" content="One way or another, every movie, tv show, or video game is probably bad. We will tell you why." />
+
+<?php if(isset($metaDesc)): ?>
+	<?php $metaDesc = str_replace('"', '', $metaDesc); ?>
+	<meta name="description" content="<?php echo $metaDesc; ?>" />
+<?php else: ?>
+	<meta name="description" content="One way or another, every movie, tv show, or video game is probably bad. We will tell you why." />
+<?php endif; ?>
 <meta property="og:image" content="<?php echo $siteImg ?>" />
 
 <?php wp_head(); ?>
